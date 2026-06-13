@@ -22,5 +22,10 @@ class DatabaseSeeder extends Seeder
             'email' => 'lunashow@hotmail.com',
             'password' => bcrypt('1234'),
         ]);
+
+        // Popula os pontos de coleta (15 bairros de Almenara)
+        $this->call([
+            PontoColetaSeeder::class,
+        ]);
     }
 }
